@@ -1,0 +1,99 @@
+// Augmenta dots example shader
+// by Augmenta (https://www.augmenta.tech)
+// Ben Kuperberg, Thomas Weissgerber and David-Alexandre Chanel
+
+/*{
+  "CREDIT": "Joseph Fiola",
+  "DESCRIPTION": "",
+  "CATEGORIES": [
+    "Generator"
+  ],
+  "INPUTS": [	
+    {
+      "NAME": "augmentaData",
+      "TYPE": "image"
+    },
+    {
+      "NAME": "augmentaMaxNumObjects",
+      "TYPE": "float",
+      "DEFAULT": 20,	
+      "MIN": 1,
+      "MAX": 20
+    },
+   {
+      "NAME": "size",
+      "TYPE": "float",
+      "DEFAULT": 0.35,
+      "MIN": 0,
+      "MAX": 1
+    },
+    {
+      "NAME": "edgeBlur",
+      "TYPE": "float",
+      "DEFAULT": 0.5,
+      "MIN": 0,
+      "MAX": 1
+    },
+    {
+    "NAME" : "color",
+      "TYPE" : "color",
+      "DEFAULT" : [
+        1,
+        1,
+        1,
+        1.0
+      ]
+    },
+    {
+    "NAME" : "bgColor",
+      "TYPE" : "color",
+      "DEFAULT" : [
+        0,
+        0,
+        0,
+        1.0
+      ]
+    }
+  ]
+}*/
+
+vec4 drawCircle(vec2 pos, float st, float weight, float radius, float edgeBlur)
+{
+    vec4 result = vec4(0,0,0,0);
+    vec2 uv = gl_FragCoord.xy / RENDERSIZE.xy;
+
+    float ratio = RENDERSIZE.x / RENDERSIZE.y;
+    uv -= pos.x;
+    uv.x *= ratio;
+    uv += pos.x;
+
+    float dist = length(uv - pos);
+    
+    float look;
+    look = abs(dist - radius);
+
+    vec4 tColor = color;
+
+    float factor = (1.0 - smoothstep(radius, (radius+edgeBlur),  look));
+    result = factor * tColor *  weight;
+
+   return result;
+}
+
+void main()
+{
+  // Init
+  vec4 colorOut = bgColor;
+	
+  for(float i=0;i<augmentaMaxNumObjects;++i)
+  {
+    // Get the point
+	float uvX = (i+.5)/augmentaMaxNumObjects;
+    vec4 point = texture2D(augmentaData, vec2(uvX,0));
+    // Draw
+	if(point.x == 0 || point.y == 0 || point.w == 0) continue;
+	colorOut += drawCircle(point.xy, point.z, point.w, size, edgeBlur);
+  }
+ 
+  gl_FragColor = colorOut;
+}
