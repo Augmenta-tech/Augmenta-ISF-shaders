@@ -24,7 +24,7 @@ The lines can be intensified depending on the proximity of the points
 
 ![balls_fire](https://user-images.githubusercontent.com/62555065/228286898-adb93fda-4786-4ebe-beb8-4a5c911f2b2c.gif)
 
-Adaptation of this ISF Shader : : https://editor.isf.video/shaders/5e7a802f7c113618206dec69
+Adaptation of this shader : https://editor.isf.video/shaders/5e7a802f7c113618206dec69
 
 # Effects
 
@@ -39,3 +39,9 @@ Duplicates the video to each object position
 ![Augmenta-resolume](https://user-images.githubusercontent.com/62555065/228286664-8cedb333-4c36-4bee-8f98-c7f4a7ae930e.gif)
 
 Deforms the video according to the movement of the objects in the scene
+
+# Contribute !
+
+Wanna share back to the Augmenta community ?
+
+You can make a pull request || share your content in the [Discord](https://discord.gg/ErWESYXR9x) server || send us a [message](https://augmenta.tech/contact) !
