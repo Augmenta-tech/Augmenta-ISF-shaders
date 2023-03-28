@@ -2,9 +2,9 @@
 
 A collection of Augmenta ISF shaders that takes [Augmenta](https://www.augmenta.tech) data as input with the protocol Augmenta OSC V3.
 
-## Sources plugins
+# Sources plugins
 
-### Augmenta dots
+## Augmenta dots
 
 ![simple_viewer](https://user-images.githubusercontent.com/62555065/228286991-cf15499d-e3a2-43c8-81c0-90b3f0e4b63d.gif)
 
@@ -26,7 +26,7 @@ The lines can be intensified depending on the proximity of the points
 
 Adaptation of this ISF Shader : : https://editor.isf.video/shaders/5e7a802f7c113618206dec69
 
-## Effects plugins
+# Effects plugins
 
 ## Augmenta duplicate
 
