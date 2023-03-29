@@ -1,6 +1,6 @@
 # Augmenta-ISF-shaders
 
-A collection of Augmenta ISF shaders that takes [Augmenta](https://www.augmenta.tech) data as input with the protocol Augmenta OSC V3.
+A collection of Augmenta ISF shaders that takes [Augmenta](https://www.augmenta.tech) data as input with the protocol [Augmenta OSC V3](https://github.com/Augmenta-tech/Augmenta/wiki/Data).
 
 # Generative
 
