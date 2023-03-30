@@ -1,6 +1,6 @@
 # Augmenta-ISF-shaders
 
-A collection of Augmenta ISF shaders that takes [Augmenta](https://www.augmenta.tech) data as input with the protocol Augmenta OSC V3.
+A collection of Augmenta ISF shaders that takes [Augmenta](https://www.augmenta.tech) data as input with the protocol [Augmenta OSC V3](https://github.com/Augmenta-tech/Augmenta/wiki/Data).
 
 # Generative
 
@@ -30,7 +30,7 @@ Adaptation of this shader : https://editor.isf.video/shaders/5e7a802f7c113618206
 
 ## Augmenta duplicate
 
-![duplicate](https://user-images.githubusercontent.com/62555065/228286948-ae861bc4-837f-4c1c-96ba-30d08de15b30.gif)
+![duplicate](https://user-images.githubusercontent.com/62555065/228566750-9e756b91-7320-4a62-b09f-d1948cf47527.gif)
 
 Duplicates the video to each object position
 
