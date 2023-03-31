@@ -40,6 +40,10 @@ Duplicates the video to each object position
 
 Deforms the video according to the movement of the objects in the scene
 
+# Thanks
+
+Thanks to the lovely Ben Kuper, Pauline Lavainne, Neil Johnson, Thomas Weissgerber, David-Alexandre Chanel, and many more !
+
 # Contribute !
 
 Use the Augmenta empty plugin to create yours
